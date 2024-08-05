@@ -24,10 +24,10 @@ body {
 .chefs {
   grid-row: 1 / 2;
   grid-column: col-start 7 / full-end;
-  background-color: #aaa; }
+  background-color: #040404;
+  opacity: 0.9; }
 
 .features {
-  background-color: #6d5d4b;
   grid-row: 2 / 3;
   grid-column: center-start / center-end; }
 
@@ -42,21 +42,24 @@ body {
   grid-column: full-start / full-end; }
 
 .gallery {
-  background-color: #101d2c;
+  background-color: #040404;
   grid-row: 5 / 6;
   grid-column: full-start / full-end; }
 
 .header {
   grid-row: 1 / 2;
   grid-column: full-start / col-end 6;
-  background-color: #101d2c; }
+  background-image: linear-gradient(rgba(4, 4, 4, 0.81), rgba(4, 4, 4, 0.81)), url(../img/restaurant.jpg);
+  background-color: #040404;
+  background-size: cover;
+  background-position: center; }
 
 .sidebar {
-  background-color: #c69963;
+  background-color: #415961;
   grid-row: 1/-1;
   grid-column: sidebar-start / sidebar-end; }
 
 .testimonials {
-  background-color: #b28451;
+  background-color: #e6c36c;
   grid-row: 3 / 4;
   grid-column: full-start / full-end; }
