@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #6d5d4b;
+  font-weight: 300;
+  line-height: 1.6; }
+
+.container {
+  display: grid;
+  background-color: #f9f7f6;
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-rows: 80vh 50rem 40vw 60rem 50rem 40rem; }
+
+.chefs {
+  grid-row: 1 / 2;
+  grid-column: col-start 7 / full-end;
+  background-color: #aaa; }
+
+.features {
+  background-color: #6d5d4b;
+  grid-row: 2 / 3;
+  grid-column: center-start / center-end; }
+
+.foods {
+  background-color: #aaa;
+  grid-row: 4 / 5;
+  grid-column: center-start / center-end; }
+
+.footer {
+  background-color: #54483a;
+  grid-row: 6 / 7;
+  grid-column: full-start / full-end; }
+
+.gallery {
+  background-color: #101d2c;
+  grid-row: 5 / 6;
+  grid-column: full-start / full-end; }
+
+.header {
+  grid-row: 1 / 2;
+  grid-column: full-start / col-end 6;
+  background-color: #101d2c; }
+
+.sidebar {
+  background-color: #c69963;
+  grid-row: 1/-1;
+  grid-column: sidebar-start / sidebar-end; }
+
+.testimonials {
+  background-color: #b28451;
+  grid-row: 3 / 4;
+  grid-column: full-start / full-end; }
