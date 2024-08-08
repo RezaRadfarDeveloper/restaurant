@@ -42,7 +42,7 @@ body {
     [center-end] minmax(6rem, 1fr) [full-end];
   grid-template-rows:
     80vh
-    50rem //min-content
+    min-content
     40vw
     //repeat(3, min-content)
     60rem
