@@ -10,16 +10,18 @@
 
 .feature {
   display: grid;
-  grid-template-columns: min-content 1fr;
-  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: minmax(4rem, 1fr);
+  grid-template-rows: repeat(3, min-content);
   grid-row-gap: 1.5rem;
   grid-column-gap: 2.5rem;
+  justify-items: center;
   &__icon {
     font-size: 3rem;
     grid-row: 1 / span 2;
     transform: translateY(-1rem);
   }
   &__text {
+    text-align: center;
     font-size: 1.7rem;
   }
 }
