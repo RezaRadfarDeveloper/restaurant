@@ -84,8 +84,7 @@ body {
 .header {
   grid-row: 1 / 2;
   grid-column: full-start / col-end 6;
-  background-image: linear-gradient(rgba(4, 4, 4, 0.81), rgba(4, 4, 4, 0.81)), url(../img/restaurant.jpg);
-  background-color: #040404;
+  background-image: linear-gradient(95deg, rgba(4, 4, 4, 0.81) 0%, rgba(4, 4, 4, 0.81) 92%, #1c1c1c 92%, #1c1c1c 100%), url(../img/restaurant.jpg);
   background-size: cover;
   background-position: center; }
 

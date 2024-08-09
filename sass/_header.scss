@@ -2,12 +2,15 @@
   grid-row: 1 / 2;
   grid-column: full-start / col-end 6;
   background-image: linear-gradient(
-      rgba($color-secondary, 0.81),
-      rgba($color-secondary, 0.81)
+      95deg,
+      rgba($color-secondary, 0.81) 0%,
+      rgba($color-secondary, 0.81) 92%,
+      $color-secondary-dark 92%,
+      $color-secondary-dark 100%
     ),
     url(../img/restaurant.jpg);
   // clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
-  background-color: $color-secondary;
+
   background-size: cover;
   background-position: center;
 }
