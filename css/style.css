@@ -7875,7 +7875,7 @@ body {
   display: grid;
   background-color: #f9f7f6;
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  grid-template-rows: 80vh min-content 40vw 60rem 50rem 40rem; }
+  grid-template-rows: 85vh min-content 40vw 60rem 50rem 40rem; }
 
 .chefs {
   grid-row: 1 / 2;
@@ -7926,7 +7926,7 @@ body {
 
 .foods {
   background-color: #aaa;
-  grid-row: 4 / 5;
+  grid-row: 3 / 4;
   grid-column: center-start / center-end; }
 
 .footer {
@@ -7936,7 +7936,7 @@ body {
 
 .gallery {
   background-color: #040404;
-  grid-row: 5 / 6;
+  grid-row: 4 / 5;
   grid-column: full-start / full-end; }
 
 .header {
@@ -7953,7 +7953,7 @@ body {
 
 .testimonials {
   background-color: #e6c36c;
-  grid-row: 3 / 4;
+  grid-row: 5 / 6;
   grid-column: full-start / full-end;
   position: relative;
   overflow: hidden; }
@@ -7964,11 +7964,11 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     grid-row-gap: 1.5rem;
-    padding: 3.8rem 10rem; }
+    padding: 3.8rem 10rem;
+    transition: transform 0.7s ease-in-out; }
     .testimonials__box--1 {
       transform: translateX(-150%) translateY(-50%); }
     .testimonials__box--2 {
@@ -8002,13 +8002,23 @@ body {
   .testimonials__arrow {
     position: absolute;
     top: 50%;
+    width: 6rem;
+    height: 6rem;
+    background-color: #f6ebbe;
+    text-align: center;
+    border-radius: 50%;
     transform: translateY(-50%);
     z-index: 10;
     cursor: pointer; }
     .testimonials__arrow--left {
-      left: 3%; }
+      left: 1%; }
     .testimonials__arrow--right {
-      right: 3%; }
+      right: 1%; }
+  .testimonials .arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-weight: 400; }

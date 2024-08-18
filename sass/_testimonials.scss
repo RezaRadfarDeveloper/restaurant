@@ -1,6 +1,6 @@
 .testimonials {
   background-color: $color-primary-dark;
-  grid-row: 3 / 4;
+  grid-row: 5 / 6;
   grid-column: full-start / full-end;
   position: relative;
   overflow: hidden;
@@ -12,11 +12,11 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     grid-row-gap: 1.5rem;
     padding: 3.8rem 10rem;
+    transition: transform 0.7s ease-in-out;
 
     &--1 {
       transform: translateX(-150%) translateY(-50%);
@@ -64,14 +64,25 @@
   &__arrow {
     position: absolute;
     top: 50%;
+    width: 6rem;
+    height: 6rem;
+    background-color: #f6ebbe;
+    text-align: center;
+    border-radius: 50%;
     transform: translateY(-50%);
     z-index: 10;
     cursor: pointer;
     &--left {
-      left: 3%;
+      left: 1%;
     }
     &--right {
-      right: 3%;
+      right: 1%;
     }
+  }
+  & .arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
