@@ -1,5 +1,39 @@
 .foods {
-  background-color: $color-grey-light-2;
   grid-row: 3 / 4;
   grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  margin: 4rem 0;
+  grid-gap: 6rem;
+}
+
+.food {
+  background-color: $color-grey-light-2;
+  height: 40rem;
+  opacity: 0.95;
+
+  &__img {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+
+    &--1 {
+      background-image: url("../img/burger.jpg");
+    }
+    &--2 {
+      background-image: url("../img/drinks.jpg");
+    }
+    &--3 {
+      background-image: url("../img/steak.jpg");
+    }
+    &--4 {
+      background-image: url("../img/fries.jpg");
+    }
+    &--5 {
+      background-image: url("../img/pizza.jpg");
+    }
+    &--6 {
+      background-image: url("../img/coffee.jpg");
+    }
+  }
 }
