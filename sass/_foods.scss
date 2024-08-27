@@ -3,19 +3,23 @@
   grid-column: center-start / center-end;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  justify-items: center;
   margin: 4rem 0;
   grid-gap: 6rem;
 }
 
 .food {
-  background-color: $color-grey-light-2;
+  // background-color: $color-grey-light-2;
   height: 40rem;
+  width: 34rem;
   opacity: 0.95;
 
   &__img {
     background-size: cover;
     background-position: center;
-    height: 100%;
+    height: 85%;
+    border-radius: 50%;
+    border: 5px solid currentColor;
 
     &--1 {
       background-image: url("../img/burger.jpg");
@@ -34,6 +38,28 @@
     }
     &--6 {
       background-image: url("../img/coffee.jpg");
+    }
+  }
+
+  &__description {
+    text-align: center;
+    /* margin-top: 2rem; */
+    padding: 2rem;
+    position: relative;
+    font-size: 2.9rem;
+    font-style: italic;
+    font-weight: 600;
+
+    // border-bottom: 2px solid rgb(109, 93, 75);
+
+    &::before {
+      content: "";
+      height: 2px;
+      width: 35%;
+      position: absolute;
+      background-color: rgb(109, 93, 75);
+      left: 50%;
+      transform: translate(-50%, 0);
     }
   }
 }
