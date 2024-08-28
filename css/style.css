@@ -7875,7 +7875,7 @@ body {
   display: grid;
   background-color: #f9f7f6;
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  grid-template-rows: 85vh min-content min-content 60rem 50rem 40rem; }
+  grid-template-rows: 85vh min-content min-content auto 50rem 40rem; }
 
 .chefs {
   grid-row: 1 / 2;
@@ -7977,10 +7977,37 @@ body {
   grid-row: 6 / 7;
   grid-column: full-start / full-end; }
 
-.gallery {
-  background-color: #040404;
+.deals {
+  background-color: #f9f7f6;
   grid-row: 4 / 5;
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: min-content;
+  grid-gap: 5rem;
+  padding: 5rem; }
+  .deals__title {
+    grid-column: 1/2;
+    height: 2rem;
+    align-items: center; }
+  .deals__btn {
+    grid-column: 2/3;
+    height: 2rem; }
+  .deals__week {
+    grid-column: 1/3;
+    background-color: #aaa;
+    border-radius: 2rem;
+    height: 29rem; }
+  .deals__bulk {
+    grid-column: 2/3;
+    background-color: #aaa;
+    border-radius: 2rem;
+    height: 24rem; }
+  .deals__family {
+    grid-column: 1/2;
+    background-color: #aaa;
+    border-radius: 2rem;
+    height: 24rem; }
 
 .header {
   grid-row: 1 / 2;

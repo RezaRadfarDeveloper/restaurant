@@ -1,0 +1,41 @@
+.deals {
+  background-color: $color-grey-light-1;
+  grid-row: 4 / 5;
+  grid-column: full-start / full-end;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: min-content;
+  grid-gap: 5rem;
+  padding: 5rem;
+
+  &__title {
+    grid-column: 1/2;
+    height: 2rem;
+    align-items: center;
+  }
+  &__btn {
+    grid-column: 2/3;
+    height: 2rem;
+  }
+
+  &__week {
+    grid-column: 1/3;
+    background-color: $color-grey-light-2;
+    border-radius: 2rem;
+    height: 29rem;
+  }
+  &__bulk {
+    grid-column: 2/3;
+    background-color: $color-grey-light-2;
+    border-radius: 2rem;
+    height: 24rem;
+  }
+
+  &__family {
+    grid-column: 1/2;
+    background-color: $color-grey-light-2;
+    border-radius: 2rem;
+    height: 24rem;
+  }
+}
