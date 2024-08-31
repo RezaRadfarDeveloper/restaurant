@@ -36,3 +36,25 @@ lArrow.addEventListener("click", function () {
 
   goToSlide(currSlide);
 });
+
+const options = {
+  root: null,
+  threshold: 0.25,
+};
+
+function revealSection(entries, observer) {
+  entries.forEach((entry, i) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("revealed");
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+const featureElements = document.querySelectorAll(".feature");
+const featureObs = new IntersectionObserver(revealSection, options);
+
+featureElements.forEach((feature) => {
+  featureObs.observe(feature);
+});

@@ -7915,7 +7915,10 @@ body {
   grid-template-rows: repeat(3, min-content);
   grid-row-gap: 1.5rem;
   grid-column-gap: 2.5rem;
-  justify-items: center; }
+  justify-items: center;
+  transform: translateY(15rem);
+  opacity: 0;
+  transition: all 1s ease-out; }
   .feature__icon {
     font-size: 3rem;
     grid-row: 1 / span 2;
@@ -7923,6 +7926,10 @@ body {
   .feature__text {
     text-align: center;
     font-size: 1.7rem; }
+
+.revealed {
+  opacity: 1;
+  transform: translateY(0); }
 
 .foods {
   grid-row: 3 / 4;

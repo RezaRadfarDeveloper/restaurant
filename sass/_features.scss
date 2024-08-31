@@ -15,6 +15,9 @@
   grid-row-gap: 1.5rem;
   grid-column-gap: 2.5rem;
   justify-items: center;
+  transform: translateY(15rem);
+  opacity: 0;
+  transition: all 1s ease-out;
   &__icon {
     font-size: 3rem;
     grid-row: 1 / span 2;
@@ -24,4 +27,9 @@
     text-align: center;
     font-size: 1.7rem;
   }
+}
+
+.revealed {
+  opacity: 1;
+  transform: translateY(0);
 }
