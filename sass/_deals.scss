@@ -23,19 +23,63 @@
     grid-column: 1/3;
     background-color: $color-grey-light-2;
     border-radius: 2rem;
-    height: 29rem;
+    height: 36rem;
+
+    & .week-container {
+      width: 85%;
+      height: 75%;
+      position: relative;
+      left: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: aquamarine;
+      border-radius: 2rem;
+    }
   }
   &__bulk {
     grid-column: 2/3;
     background-color: $color-grey-light-2;
     border-radius: 2rem;
-    height: 24rem;
+    height: 32rem;
+    & .bulk-container {
+      position: relative;
+      width: 50%;
+      height: 90%;
+      border-radius: 2rem;
+      background-color: aquamarine;
+      left: 45%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 
   &__family {
     grid-column: 1/2;
     background-color: $color-grey-light-2;
     border-radius: 2rem;
-    height: 24rem;
+    height: 32rem;
+
+    & .family-container {
+      position: relative;
+      left: 50%;
+      width: 50%;
+      height: 70%;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: aquamarine;
+      border-top-left-radius: 2rem;
+      border-bottom-left-radius: 2rem;
+
+      & .family-content {
+        width: 110%;
+        height: 90%;
+        background-color: blue;
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+        position: relative;
+        top: 10%;
+        left: -10%;
+      }
+    }
   }
 }

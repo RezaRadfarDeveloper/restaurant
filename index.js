@@ -23,19 +23,22 @@ const rArrow = document.querySelector(".testimonials__arrow--right");
 
 console.log(lArrow);
 
-rArrow.addEventListener("click", function () {
+const nextSlide = function () {
   currSlide++;
   if (currSlide > slidesCount - 1) currSlide = 0;
 
   goToSlide(currSlide);
-});
+};
 
-lArrow.addEventListener("click", function () {
+const prevSlide = function () {
   currSlide--;
   if (currSlide < 0) currSlide = slidesCount - 1;
 
   goToSlide(currSlide);
-});
+};
+rArrow.addEventListener("click", nextSlide);
+
+lArrow.addEventListener("click", prevSlide);
 
 const options = {
   root: null,
