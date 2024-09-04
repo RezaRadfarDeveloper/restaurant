@@ -8086,7 +8086,8 @@ body {
       width: 4rem;
       height: 4px;
       border-radius: 2px;
-      background-color: white; }
+      background-color: white;
+      cursor: pointer; }
       .testimonials__dashes .dash:not(:last-child) {
         margin-right: 2rem; }
       .testimonials__dashes .dash.active {
@@ -8103,12 +8104,6 @@ body {
     grid-row-gap: 1.5rem;
     padding: 3.8rem 10rem;
     transition: transform 0.7s ease-in-out; }
-    .testimonials__box--1 {
-      transform: translateX(-150%) translateY(-50%); }
-    .testimonials__box--2 {
-      transform: translateX(-50%) translateY(-50%); }
-    .testimonials__box--3 {
-      transform: translateX(50%) translateY(-50%); }
   .testimonials__text {
     font-size: 1.7rem;
     align-self: center; }
