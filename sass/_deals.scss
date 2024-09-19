@@ -8,45 +8,58 @@
   grid-template-rows: min-content;
   grid-gap: 5rem;
   padding: 5rem;
+  color: $color-primary;
 
   &__title {
     grid-column: 1/2;
     height: 2rem;
-    align-items: center;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: $color-primary;
   }
   &__btn {
     grid-column: 2/3;
-    height: 2rem;
+    height: 5rem;
+    width: 12rem;
+    border-radius: 3rem;
+    justify-self: end;
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+    background-color: $color-primary;
   }
 
   &__week {
     grid-column: 1/3;
-    background-color: $color-grey-light-2;
+    background-color: $color-red-dark-1;
     border-radius: 2rem;
     height: 36rem;
 
-    & .week-container {
+    & .week__container {
       width: 85%;
       height: 75%;
+      padding: 2rem;
       position: relative;
       left: 5%;
       top: 50%;
       transform: translateY(-50%);
-      background-color: aquamarine;
+      background-color: $color-primary-dark;
       border-radius: 2rem;
     }
   }
   &__bulk {
     grid-column: 2/3;
-    background-color: $color-grey-light-2;
+    background-color: $color-red-dark-1;
     border-radius: 2rem;
     height: 32rem;
-    & .bulk-container {
+    & .bulk__container {
       position: relative;
       width: 50%;
       height: 90%;
+      padding: 2rem;
       border-radius: 2rem;
-      background-color: aquamarine;
+      background-color: $color-primary-dark;
       left: 45%;
       top: 50%;
       transform: translateY(-50%);
@@ -55,30 +68,145 @@
 
   &__family {
     grid-column: 1/2;
-    background-color: $color-grey-light-2;
+    background-color: $color-red-dark-1;
     border-radius: 2rem;
     height: 32rem;
+  }
 
-    & .family-container {
-      position: relative;
-      left: 50%;
-      width: 50%;
-      height: 70%;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: aquamarine;
+  .week__container {
+    &--content {
+      display: flex;
+      justify-content: space-between;
+      & .deal__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        & > p {
+          font-size: 1.6rem;
+          &:nth-child(1) {
+            font-weight: 700;
+          }
+        }
+
+        & > h3 {
+          font-size: 4rem;
+          font-weight: 700;
+        }
+        &--price {
+          font-size: 5.6rem;
+          margin-top: 2rem;
+        }
+      }
+      & .deal__savings {
+        &--wrapper {
+          width: 11rem;
+          height: 11rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          background-color: currentColor;
+        }
+        &--content {
+          font-size: 2.6rem;
+          line-height: 1.4;
+          font-weight: 700;
+          color: white;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .family__container {
+    position: relative;
+    left: 50%;
+    width: 50%;
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $color-primary-light;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+
+    &--content {
+      width: 110%;
+      height: 90%;
+      background-color: $color-primary-dark;
       border-top-left-radius: 2rem;
       border-bottom-left-radius: 2rem;
+      padding: 2rem;
+      position: relative;
+      top: 10%;
+      left: -10%;
+      & .deal__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        align-items: start;
+        margin-top: 1.5rem;
+        & > p {
+          font-size: 1.6rem;
+          &:nth-child(1) {
+            font-weight: 700;
+          }
+        }
 
-      & .family-content {
-        width: 110%;
-        height: 90%;
-        background-color: blue;
-        border-top-left-radius: 2rem;
-        border-bottom-left-radius: 2rem;
-        position: relative;
-        top: 10%;
-        left: -10%;
+        & > h3 {
+          font-size: 2.5rem;
+          font-weight: 700;
+        }
+        &--price {
+          font-size: 5.6rem;
+        }
+      }
+    }
+  }
+
+  .bulk__container {
+    &--content {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column-reverse;
+      align-items: end;
+      & .deal__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        & > p {
+          font-size: 1.6rem;
+          &:nth-child(1) {
+            font-weight: 700;
+          }
+        }
+
+        & > h3 {
+          font-size: 2.5rem;
+          font-weight: 700;
+        }
+        &--price {
+          font-size: 5.6rem;
+        }
+      }
+      & .deal__savings {
+        &--wrapper {
+          width: 11rem;
+          height: 11rem;
+          margin-bottom: 2rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          background-color: currentColor;
+        }
+        &--content {
+          font-size: 2.6rem;
+          line-height: 1.4;
+          font-weight: 700;
+          color: white;
+          text-align: center;
+        }
       }
     }
   }

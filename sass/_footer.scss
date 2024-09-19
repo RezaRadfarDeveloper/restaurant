@@ -1,5 +1,89 @@
 .footer {
-  background-color: $color-grey-dark-1;
+  background-color: $color-primary-dark-1;
   grid-row: 6 / 7;
   grid-column: full-start / full-end;
+  padding: 4rem 0;
+  color: white;
+
+  &__container {
+    max-width: 90%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    // background-color: bisque;
+    display: flex;
+    justify-content: space-between;
+
+    & > * {
+      width: 22%;
+    }
+
+    &--description {
+      // background-color: aquamarine;
+      & > *:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+      & .title {
+        // margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 3rem;
+        & .logo {
+          background: orange;
+          height: 4rem;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 4rem;
+          border-radius: 50%;
+          margin-right: 2rem;
+        }
+
+        & .name {
+          font-size: 3rem;
+          font-weight: 500;
+        }
+      }
+      & .description-text {
+        margin-bottom: 2rem;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.05em;
+      }
+      & .social-media {
+        margin-bottom: 2rem;
+        display: flex;
+        &__icon {
+          text-decoration: none;
+          color: white;
+          &:not(:last-child) {
+            margin-right: 2rem;
+          }
+        }
+      }
+    }
+    &--menu,
+    &--information,
+    &--contact {
+      & .name {
+        display: block;
+        font-size: 3rem;
+        font-weight: 500;
+        margin-bottom: 3rem;
+      }
+      & .option {
+        &:not(:last-of-type) {
+          margin-bottom: 2rem;
+        }
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.05em;
+      }
+    }
+    &--information {
+    }
+    &--contact {
+    }
+  }
 }

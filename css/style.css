@@ -7873,7 +7873,7 @@ body {
 
 .container {
   display: grid;
-  background-color: #f9f7f6;
+  background-color: white;
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   grid-template-rows: 85vh min-content min-content auto 50rem 40rem; }
 
@@ -7980,9 +7980,63 @@ body {
       transform: translate(-50%, 0); }
 
 .footer {
-  background-color: #54483a;
+  background-color: #0f2d3a;
   grid-row: 6 / 7;
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  padding: 4rem 0;
+  color: white; }
+  .footer__container {
+    max-width: 90%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between; }
+    .footer__container > * {
+      width: 22%; }
+    .footer__container--description > *:not(:last-child) {
+      margin-bottom: 2rem; }
+    .footer__container--description .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3rem; }
+      .footer__container--description .title .logo {
+        background: orange;
+        height: 4rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4rem;
+        border-radius: 50%;
+        margin-right: 2rem; }
+      .footer__container--description .title .name {
+        font-size: 3rem;
+        font-weight: 500; }
+    .footer__container--description .description-text {
+      margin-bottom: 2rem;
+      font-size: 14px;
+      line-height: 1.71;
+      letter-spacing: 0.05em; }
+    .footer__container--description .social-media {
+      margin-bottom: 2rem;
+      display: flex; }
+      .footer__container--description .social-media__icon {
+        text-decoration: none;
+        color: white; }
+        .footer__container--description .social-media__icon:not(:last-child) {
+          margin-right: 2rem; }
+    .footer__container--menu .name, .footer__container--information .name, .footer__container--contact .name {
+      display: block;
+      font-size: 3rem;
+      font-weight: 500;
+      margin-bottom: 3rem; }
+    .footer__container--menu .option, .footer__container--information .option, .footer__container--contact .option {
+      font-size: 14px;
+      line-height: 1.71;
+      letter-spacing: 0.05em; }
+      .footer__container--menu .option:not(:last-of-type), .footer__container--information .option:not(:last-of-type), .footer__container--contact .option:not(:last-of-type) {
+        margin-bottom: 2rem; }
 
 .deals {
   background-color: #f9f7f6;
@@ -7992,66 +8046,161 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: min-content;
   grid-gap: 5rem;
-  padding: 5rem; }
+  padding: 5rem;
+  color: #415961; }
   .deals__title {
     grid-column: 1/2;
     height: 2rem;
-    align-items: center; }
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #415961; }
   .deals__btn {
     grid-column: 2/3;
-    height: 2rem; }
+    height: 5rem;
+    width: 12rem;
+    border-radius: 3rem;
+    justify-self: end;
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+    background-color: #415961; }
   .deals__week {
     grid-column: 1/3;
-    background-color: #aaa;
+    background-color: #a35252;
     border-radius: 2rem;
     height: 36rem; }
-    .deals__week .week-container {
+    .deals__week .week__container {
       width: 85%;
       height: 75%;
+      padding: 2rem;
       position: relative;
       left: 5%;
       top: 50%;
       transform: translateY(-50%);
-      background-color: aquamarine;
+      background-color: #e6c36c;
       border-radius: 2rem; }
   .deals__bulk {
     grid-column: 2/3;
-    background-color: #aaa;
+    background-color: #a35252;
     border-radius: 2rem;
     height: 32rem; }
-    .deals__bulk .bulk-container {
+    .deals__bulk .bulk__container {
       position: relative;
       width: 50%;
       height: 90%;
+      padding: 2rem;
       border-radius: 2rem;
-      background-color: aquamarine;
+      background-color: #e6c36c;
       left: 45%;
       top: 50%;
       transform: translateY(-50%); }
   .deals__family {
     grid-column: 1/2;
-    background-color: #aaa;
+    background-color: #a35252;
     border-radius: 2rem;
     height: 32rem; }
-    .deals__family .family-container {
-      position: relative;
-      left: 50%;
-      width: 50%;
-      height: 70%;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: aquamarine;
+  .deals .week__container--content {
+    display: flex;
+    justify-content: space-between; }
+    .deals .week__container--content .deal__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .deals .week__container--content .deal__info > p {
+        font-size: 1.6rem; }
+        .deals .week__container--content .deal__info > p:nth-child(1) {
+          font-weight: 700; }
+      .deals .week__container--content .deal__info > h3 {
+        font-size: 4rem;
+        font-weight: 700; }
+      .deals .week__container--content .deal__info--price {
+        font-size: 5.6rem;
+        margin-top: 2rem; }
+    .deals .week__container--content .deal__savings--wrapper {
+      width: 11rem;
+      height: 11rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: currentColor; }
+    .deals .week__container--content .deal__savings--content {
+      font-size: 2.6rem;
+      line-height: 1.4;
+      font-weight: 700;
+      color: white;
+      text-align: center; }
+  .deals .family__container {
+    position: relative;
+    left: 50%;
+    width: 50%;
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffe67f;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem; }
+    .deals .family__container--content {
+      width: 110%;
+      height: 90%;
+      background-color: #e6c36c;
       border-top-left-radius: 2rem;
-      border-bottom-left-radius: 2rem; }
-      .deals__family .family-container .family-content {
-        width: 110%;
-        height: 90%;
-        background-color: blue;
-        border-top-left-radius: 2rem;
-        border-bottom-left-radius: 2rem;
-        position: relative;
-        top: 10%;
-        left: -10%; }
+      border-bottom-left-radius: 2rem;
+      padding: 2rem;
+      position: relative;
+      top: 10%;
+      left: -10%; }
+      .deals .family__container--content .deal__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        align-items: start;
+        margin-top: 1.5rem; }
+        .deals .family__container--content .deal__info > p {
+          font-size: 1.6rem; }
+          .deals .family__container--content .deal__info > p:nth-child(1) {
+            font-weight: 700; }
+        .deals .family__container--content .deal__info > h3 {
+          font-size: 2.5rem;
+          font-weight: 700; }
+        .deals .family__container--content .deal__info--price {
+          font-size: 5.6rem; }
+  .deals .bulk__container--content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    align-items: end; }
+    .deals .bulk__container--content .deal__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center; }
+      .deals .bulk__container--content .deal__info > p {
+        font-size: 1.6rem; }
+        .deals .bulk__container--content .deal__info > p:nth-child(1) {
+          font-weight: 700; }
+      .deals .bulk__container--content .deal__info > h3 {
+        font-size: 2.5rem;
+        font-weight: 700; }
+      .deals .bulk__container--content .deal__info--price {
+        font-size: 5.6rem; }
+    .deals .bulk__container--content .deal__savings--wrapper {
+      width: 11rem;
+      height: 11rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: currentColor; }
+    .deals .bulk__container--content .deal__savings--content {
+      font-size: 2.6rem;
+      line-height: 1.4;
+      font-weight: 700;
+      color: white;
+      text-align: center; }
 
 .header {
   grid-row: 1 / 2;

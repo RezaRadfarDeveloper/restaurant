@@ -1,14 +1,18 @@
 // COLORS
-$color-primary: #415961; //#e0ca91;
-$color-primary-dark: #e6c36c;
+$color-primary: #415961;
+$color-primary-dark-1: #0f2d3a;
 
-$color-secondary: #040404; //rgb(175, 41, 12); // #8a1c80;
+$color-primary-dark: #e6c36c;
+$color-primary-light: #ffe67f;
+
+$color-secondary: #040404;
 $color-secondary-dark: #1c1c1c;
 $color-grey-light-1: #f9f7f6;
 $color-grey-light-2: #aaa;
 
 $color-grey-dark-1: #54483a;
 $color-grey-dark-2: #6d5d4b;
+$color-red-dark-1: #a35252;
 
 //FONTS
 $font-primary: "Nunito", sans-serif;
@@ -36,7 +40,7 @@ body {
 
 .container {
   display: grid;
-  background-color: $color-grey-light-1;
+  background-color: white;
   grid-template-columns:
     [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
