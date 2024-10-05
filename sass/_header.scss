@@ -13,4 +13,112 @@
 
   background-size: cover;
   background-position: center;
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  & .container {
+    width: 30rem;
+    height: 30rem;
+    display: flex;
+    background-color: transparent;
+    flex-direction: column;
+
+    &__top {
+      height: auto;
+      width: 100%;
+      animation-name: moveInRight;
+      text-align: center;
+      animation-duration: 0.8s;
+      animation-delay: 0.5s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: backwards;
+
+      & .title {
+        font-size: 3rem;
+        line-height: 3.5rem;
+        font-family: "Yellowtail", sans-serif;
+        color: #e6c36c;
+      }
+
+      & .hero {
+        width: 100%;
+        text-transform: uppercase;
+        font-family: Oswald, sans-serif;
+        color: #fff;
+        white-space: nowrap;
+        margin: 1rem 0;
+        font-size: 4rem;
+        font-weight: 400;
+        line-height: 4rem;
+      }
+      & .underline {
+        width: 22rem;
+        height: 4px;
+        background-color: #e6c36c;
+        margin: 2rem auto;
+        display: block;
+      }
+    }
+    &__bottom {
+      height: 50%;
+      width: 100%;
+      text-align: center;
+      color: #6d5d4b;
+      animation-name: moveInLeft;
+      animation-duration: 0.8s;
+      animation-delay: 0.5s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: backwards;
+
+      & .sub-title {
+        color: #fff;
+        font-family: Oswald, sans-serif;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 2.5rem;
+      }
+
+      & .contact-us {
+        min-width: 200px;
+        color: #20272f;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        background-color: #e6c36c;
+        border-radius: 3px;
+        margin-top: 2.5rem;
+        padding: 16px 22px;
+        font-family: Oswald, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: opacity 0.2s;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
