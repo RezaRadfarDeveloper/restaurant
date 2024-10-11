@@ -5,6 +5,13 @@
   padding: 4rem 0;
   color: white;
 
+  @media only screen and (max-width: $bp-large) {
+    grid-row: 7/8;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    grid-row: 8/9;
+  }
+
   &__container {
     max-width: 90%;
     height: 100%;

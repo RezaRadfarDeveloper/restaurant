@@ -17,6 +17,19 @@
   display: grid;
   justify-content: center;
   align-content: center;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-row: 2/3;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1/-1;
+    background-image: linear-gradient(
+        95deg,
+        rgba($color-secondary, 0.81) 0%,
+        rgba($color-secondary, 0.81) 100%
+      ),
+      url(../img/restaurant.jpg);
+  }
   & .container {
     width: 30rem;
     height: 30rem;
@@ -87,9 +100,9 @@
         background-color: #e6c36c;
         border-radius: 3px;
         margin-top: 2.5rem;
-        padding: 16px 22px;
+        padding: 1.6rem 2.2rem;
         font-family: Oswald, sans-serif;
-        font-size: 14px;
+        font-size: 1.6rem;
         font-weight: 600;
         text-decoration: none;
         transition: opacity 0.2s;

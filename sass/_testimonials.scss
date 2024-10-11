@@ -4,6 +4,13 @@
   grid-column: full-start / full-end;
   position: relative;
   overflow: hidden;
+  @media only screen and (max-width: $bp-large) {
+    grid-row: 6/7;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-row: 7/8;
+  }
   &__dashes {
     position: absolute;
     display: flex;

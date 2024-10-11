@@ -9,6 +9,19 @@
   grid-row-gap: 2rem;
   opacity: 0.9;
 
+  @media only screen and (max-width: $bp-large) {
+    grid-row: 2/3;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-row: 3/4;
+    grid-column: 1/-1;
+    grid-row-gap: 0;
+    & h3 {
+      margin-bottom: 0;
+    }
+  }
+
   &__img {
     width: 7rem;
     height: 7rem;
@@ -20,6 +33,22 @@
     grid-column-gap: 2rem;
     grid-row-gap: 5vh;
     align-items: center;
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: repeat(3, min-content max-content);
+      margin: 2rem 0;
+
+      & .chefs__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        & h4 {
+          margin: 0;
+        }
+        & p {
+          margin: 0;
+        }
+      }
+    }
   }
 
   &__mastery {
