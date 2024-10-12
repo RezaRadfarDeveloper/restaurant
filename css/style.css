@@ -7877,14 +7877,14 @@ body {
   display: grid;
   background-color: white;
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  grid-template-rows: 85vh min-content min-content auto 50rem 40rem; }
+  grid-template-rows: 85vh min-content min-content auto 50rem auto; }
   @media only screen and (max-width: 62.5em) {
     .container {
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-      grid-template-rows: 6rem 85vh auto min-content auto 50rem 40rem; } }
+      grid-template-rows: 6rem 85vh auto min-content auto 50rem auto; } }
   @media only screen and (max-width: 50em) {
     .container {
-      grid-template-rows: 6rem 85vh auto auto min-content auto 50rem 40rem; } }
+      grid-template-rows: 6rem 85vh auto auto min-content auto 50rem auto; } }
 
 .chefs {
   grid-row: 1 / 2;
@@ -7972,7 +7972,7 @@ body {
   grid-row: 3 / 4;
   grid-column: center-start / center-end;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
   justify-items: center;
   margin: 4rem 0;
   grid-gap: 6rem; }
@@ -7990,7 +7990,7 @@ body {
   .food__img {
     background-size: cover;
     background-position: center;
-    height: 85%;
+    height: 82%;
     border-radius: 50%;
     border: 5px solid currentColor; }
     .food__img--1 {
@@ -8039,10 +8039,21 @@ body {
     height: 100%;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
-    justify-content: space-between; }
-    .footer__container > * {
-      width: 22%; }
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: max-content;
+    grid-column-gap: 6rem; }
+    @media only screen and (max-width: 62.5em) {
+      .footer__container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: max-content; } }
+    @media only screen and (max-width: 37.5em) {
+      .footer__container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: max-content; }
+        .footer__container > * {
+          text-align: center;
+          padding: 3rem; } }
     .footer__container--description > *:not(:last-child) {
       margin-bottom: 2rem; }
     .footer__container--description .title {
@@ -8075,6 +8086,11 @@ body {
         color: white; }
         .footer__container--description .social-media__icon:not(:last-child) {
           margin-right: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__container--description .title {
+        justify-content: center; }
+      .footer__container--description .social-media {
+        justify-content: center; } }
     .footer__container--menu .name, .footer__container--information .name, .footer__container--contact .name {
       display: block;
       font-size: 3rem;
@@ -8146,7 +8162,8 @@ body {
     .deals__bulk .bulk__container {
       position: absolute;
       width: 50%;
-      height: 88%;
+      height: 80%;
+      margin-right: 1rem;
       padding: 2rem;
       border-radius: 2rem;
       background-color: #e6c36c;
@@ -8241,7 +8258,8 @@ body {
           font-weight: 700; }
       .deals .bulk__container--content .deal__info > h3 {
         font-size: 2.5rem;
-        font-weight: 700; }
+        font-weight: 700;
+        margin-bottom: 0; }
       .deals .bulk__container--content .deal__info--price {
         font-size: 5.6rem;
         margin: 0; }

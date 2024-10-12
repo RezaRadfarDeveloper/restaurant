@@ -2,7 +2,7 @@
   grid-row: 3 / 4;
   grid-column: center-start / center-end;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
   justify-items: center;
   margin: 4rem 0;
   grid-gap: 6rem;
@@ -25,7 +25,7 @@
   &__img {
     background-size: cover;
     background-position: center;
-    height: 85%;
+    height: 82%;
     border-radius: 50%;
     border: 5px solid currentColor;
 
