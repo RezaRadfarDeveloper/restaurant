@@ -62,8 +62,10 @@
     // }
   }
   &__text {
+    width: 80%;
     font-size: 1.7rem;
     align-self: center;
+    justify-self: center;
   }
 
   &__details {

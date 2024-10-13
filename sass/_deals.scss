@@ -17,6 +17,11 @@
     grid-row: 6/7;
   }
 
+  @media only screen and (max-width: $bp-small) {
+    padding: 1.5rem;
+    grid-gap: 2rem;
+  }
+
   &__title {
     grid-column: 1/2;
     height: 2rem;
@@ -47,7 +52,7 @@
 
     & .week__container {
       width: 85%;
-      height: 75%;
+      height: 80%;
       padding: 2rem;
       position: relative;
       left: 5%;
@@ -61,7 +66,7 @@
     grid-column: 2/3;
     background-color: $color-red-dark-1;
     border-radius: 2rem;
-    height: 32rem;
+    height: 36rem;
     position: relative;
     & .bulk__container {
       position: absolute;
@@ -81,7 +86,7 @@
     grid-column: 1/2;
     background-color: $color-red-dark-1;
     border-radius: 2rem;
-    height: 32rem;
+    height: 36rem;
   }
 
   .week__container {
@@ -132,7 +137,7 @@
     position: relative;
     left: 50%;
     width: 50%;
-    height: 70%;
+    height: 80%;
     top: 50%;
     transform: translateY(-50%);
     background-color: $color-primary-light;
