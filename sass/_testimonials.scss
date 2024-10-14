@@ -50,22 +50,16 @@
     grid-row-gap: 1.5rem;
     padding: 3.8rem 10rem;
     transition: transform 0.7s ease-in-out;
-
-    // &--1 {
-    //   transform: translateX(-150%) translateY(-50%);
-    // }
-    // &--2 {
-    //   transform: translateX(-50%) translateY(-50%);
-    // }
-    // &--3 {
-    //   transform: translateX(50%) translateY(-50%);
-    // }
   }
   &__text {
     width: 80%;
     font-size: 1.7rem;
     align-self: center;
     justify-self: center;
+
+    @media only screen and (max-width: $bp-small) {
+      width: 60%;
+    }
   }
 
   &__details {

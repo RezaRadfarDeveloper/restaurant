@@ -1,3 +1,4 @@
+import "./sass/main.scss";
 const slides = document.querySelectorAll(".testimonials__box");
 const slidesCount = slides.length;
 let currSlide = 0;

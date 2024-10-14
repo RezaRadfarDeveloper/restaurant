@@ -7993,13 +7993,13 @@ body {
       grid-row: 5/6; } }
 
 .food {
-  height: 40rem;
-  width: 34rem;
+  height: 37rem;
+  width: 32rem;
   opacity: 0.95; }
   .food__img {
     background-size: cover;
     background-position: center;
-    height: 82%;
+    height: 83%;
     border-radius: 50%;
     border: 5px solid currentColor; }
     .food__img--1 {
@@ -8521,6 +8521,9 @@ body {
     font-size: 1.7rem;
     align-self: center;
     justify-self: center; }
+    @media only screen and (max-width: 37.5em) {
+      .testimonials__text {
+        width: 60%; } }
   .testimonials__details {
     display: grid;
     grid-template-columns: min-content 1fr;
