@@ -58,7 +58,7 @@ body {
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end] minmax(6rem, 1fr) [full-end];
   grid-template-rows:
-    85vh
+    85dvh
     min-content
     min-content
     //repeat(3, min-content)
@@ -77,7 +77,7 @@ body {
   @media only screen and (max-width: $bp-medium) {
     grid-template-rows:
       6rem
-      85vh
+      85dvh
       auto
       auto
       min-content
