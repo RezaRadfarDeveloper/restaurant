@@ -18,14 +18,15 @@
 
 .food {
   // background-color: $color-grey-light-2;
-  height: 37rem;
+  // height: 37rem;
   width: 32rem;
   opacity: 0.95;
 
   &__img {
     background-size: cover;
     background-position: center;
-    height: 83%;
+    // height: 83%;
+    height: 32rem;
     border-radius: 50%;
     border: 5px solid currentColor;
 
@@ -69,5 +70,12 @@
       left: 50%;
       transform: translate(-50%, 0);
     }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 0.15px;
+    text-align: center;
   }
 }
