@@ -8002,16 +8002,11 @@ body {
     height: 32rem;
     border-radius: 50%;
     border: 5px solid currentColor; }
-    .food__img--2 {
-      background-image: url("../img/drinks.jpg"); }
-    .food__img--3 {
-      background-image: url("../img/steak.jpg"); }
-    .food__img--4 {
-      background-image: url("../img/fries.jpg"); }
-    .food__img--5 {
-      background-image: url("../img/pizza.jpg"); }
-    .food__img--6 {
-      background-image: url("../img/coffee.jpg"); }
+    .food__img .content {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+      border-radius: 50%; }
   .food__description {
     text-align: center;
     /* margin-top: 2rem; */
