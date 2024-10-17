@@ -8002,8 +8002,6 @@ body {
     height: 32rem;
     border-radius: 50%;
     border: 5px solid currentColor; }
-    .food__img--1 {
-      background-image: url("../img/burger.jpg"); }
     .food__img--2 {
       background-image: url("../img/drinks.jpg"); }
     .food__img--3 {

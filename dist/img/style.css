@@ -7880,14 +7880,14 @@ body {
   display: grid;
   background-color: white;
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  grid-template-rows: 85vh min-content min-content auto 50rem auto; }
+  grid-template-rows: 85dvh min-content min-content auto 50rem auto; }
   @media only screen and (max-width: 62.5em) {
     .container {
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
       grid-template-rows: 6rem 85vh auto min-content auto 50rem auto; } }
   @media only screen and (max-width: 50em) {
     .container {
-      grid-template-rows: 6rem 85vh auto auto min-content auto 50rem auto; } }
+      grid-template-rows: 6rem 85dvh auto auto min-content auto 50rem auto; } }
 
 .chefs {
   grid-row: 1 / 2;
@@ -7920,7 +7920,7 @@ body {
     display: grid;
     grid-template-columns: min-content max-content;
     grid-column-gap: 2rem;
-    grid-row-gap: 5vh;
+    grid-row-gap: 5dvh;
     align-items: center; }
     @media only screen and (max-width: 50em) {
       .chefs__list {
@@ -7971,7 +7971,8 @@ body {
     transform: translateY(-1rem); }
   .feature__text {
     text-align: center;
-    font-size: 1.7rem; }
+    font-size: 1.7rem;
+    font-weight: 400; }
 
 .revealed {
   opacity: 1;
@@ -7993,17 +7994,14 @@ body {
       grid-row: 5/6; } }
 
 .food {
-  height: 37rem;
   width: 32rem;
   opacity: 0.95; }
   .food__img {
     background-size: cover;
     background-position: center;
-    height: 83%;
+    height: 32rem;
     border-radius: 50%;
     border: 5px solid currentColor; }
-    .food__img--1 {
-      background-image: url("../img/burger.jpg"); }
     .food__img--2 {
       background-image: url("../img/drinks.jpg"); }
     .food__img--3 {
@@ -8030,6 +8028,11 @@ body {
       background-color: #6d5d4b;
       left: 50%;
       transform: translate(-50%, 0); }
+  .food__text {
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 0.15px;
+    text-align: center; }
 
 .footer {
   background-color: #0f2d3a;
@@ -8455,7 +8458,7 @@ body {
 @media only screen and (max-width: 62.5em) {
   .side-menu:checked + .sidebar {
     width: 100%;
-    height: calc(100vh - 6rem); } }
+    height: calc(100dvh - 6rem); } }
 
 .side-menu:checked + .sidebar .menu-item {
   opacity: 1;
@@ -8589,6 +8592,8 @@ body {
 
 .heading-4 {
   font-size: 1.9rem; }
+  .heading-4--bold {
+    font-weight: 500 !important; }
   .heading-4--light {
     color: #f9f7f6; }
   .heading-4--dark {

@@ -30,24 +30,28 @@
     border-radius: 50%;
     border: 5px solid currentColor;
 
-    &--1 {
-      background-image: url("../img/burger.jpg");
+    & .content {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+      border-radius: 50%;
     }
-    &--2 {
-      background-image: url("../img/drinks.jpg");
-    }
-    &--3 {
-      background-image: url("../img/steak.jpg");
-    }
-    &--4 {
-      background-image: url("../img/fries.jpg");
-    }
-    &--5 {
-      background-image: url("../img/pizza.jpg");
-    }
-    &--6 {
-      background-image: url("../img/coffee.jpg");
-    }
+
+    // &--2 {
+    //   background-image: url("../img/drinks.jpg");
+    // }
+    // &--3 {
+    //   background-image: url("../img/steak.jpg");
+    // }
+    // &--4 {
+    //   background-image: url("../img/fries.jpg");
+    // }
+    // &--5 {
+    //   background-image: url("../img/pizza.jpg");
+    // }
+    // &--6 {
+    //   background-image: url("../img/coffee.jpg");
+    // }
   }
 
   &__description {
