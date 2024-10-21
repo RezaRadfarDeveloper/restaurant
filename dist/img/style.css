@@ -8441,6 +8441,11 @@ body {
     opacity: 0;
     transition: all 0.3s ease;
     z-index: -2; }
+    .sidebar .menu-item::before {
+      content: "";
+      width: 4px;
+      height: 100%;
+      background-color: red; }
 
 .side-menu {
   position: absolute;
