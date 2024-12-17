@@ -10503,21 +10503,23 @@ body {
 .container {
   display: grid;
   background-color: white;
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(
-      6rem,
-      1fr
-    ) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(
-      6rem,
-      1fr
-    ) [full-end];
+  grid-template-columns:
+    [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)
+    [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    ) [center-end] minmax(6rem, 1fr)
+    [full-end];
   grid-template-rows: 85dvh min-content min-content auto 50rem auto;
 }
 @media only screen and (max-width: 62.5em) {
   .container {
-    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr) [center-start] repeat(
         8,
         [col-start] minmax(min-content, 14rem) [col-end]
-      ) [center-end] minmax(6rem, 1fr) [full-end];
+      )
+      [center-end] minmax(6rem, 1fr) [full-end];
     grid-template-rows: 6rem 85vh auto min-content auto 50rem auto;
   }
 }
@@ -10880,7 +10882,7 @@ body {
   left: 5%;
   top: 50%;
   transform: translateY(-50%);
-  background-color: $color-back-deal;
+  background-color: #e6c36c;
   border-radius: 2rem;
 }
 .deals__bulk {
