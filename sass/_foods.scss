@@ -25,16 +25,21 @@
   &__img {
     background-size: cover;
     background-position: center;
-    // height: 83%;
+    overflow: hidden;
     height: 32rem;
     border-radius: 50%;
     border: 5px solid currentColor;
+    cursor: pointer;
 
     & .content {
       width: 100%;
       object-fit: cover;
       height: 100%;
       border-radius: 50%;
+      transition: transform 0.7s ease-out;
+      &:hover {
+        transform: scale(1.24);
+      }
     }
 
     // &--2 {
