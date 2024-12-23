@@ -64,7 +64,7 @@ body {
     min-content
     //repeat(3, min-content)
     auto
-    50rem
+    52rem
     auto;
 
   @media only screen and (max-width: $bp-large) {
@@ -72,7 +72,7 @@ body {
       [full-start] minmax(6rem, 1fr)
       [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
       [center-end] minmax(6rem, 1fr) [full-end];
-    grid-template-rows: 6rem 85vh auto min-content auto 50rem auto;
+    grid-template-rows: 6rem 85vh auto min-content auto 58rem auto;
   }
 
   @media only screen and (max-width: $bp-medium) {
@@ -84,7 +84,7 @@ body {
       min-content
       //repeat(3, min-content)
       auto
-      50rem
+      58rem
       auto;
   }
 }
