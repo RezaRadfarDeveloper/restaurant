@@ -3,6 +3,9 @@ const slides = document.querySelectorAll(".testimonials__box");
 const slidesCount = slides.length;
 let currSlide = 0;
 
+const lArrow = document.querySelector(".testimonials__arrow--left");
+const rArrow = document.querySelector(".testimonials__arrow--right");
+
 function goToSlide(number) {
   currSlide = number;
   slides.forEach((s, i) => {
@@ -14,6 +17,8 @@ function goToSlide(number) {
       s.style.transform = `translate(${
         (i - number) * 100 - 50
       }%, -50%) scale(1)`;
+    //TBC ....***
+    // lArrow.classList.add(`testimonials__box--${number - 1}`);
   });
 }
 const dashesContainer = document.querySelector(".testimonials__dashes");
@@ -36,9 +41,6 @@ function activateDash(number) {
 
 goToSlide(0);
 activateDash(0);
-
-const lArrow = document.querySelector(".testimonials__arrow--left");
-const rArrow = document.querySelector(".testimonials__arrow--right");
 
 const nextSlide = function () {
   currSlide++;

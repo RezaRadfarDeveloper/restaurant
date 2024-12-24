@@ -24,6 +24,7 @@ $bp-largest: 75em; // 1200px
 $bp-large: 62.5em; // 1000px
 $bp-medium: 50em; // 800px
 $bp-small: 37.5em; // 600px
+$bp-smallest: 28.75em; // 460px
 
 *::before,
 *::after {
@@ -64,7 +65,7 @@ body {
     min-content
     //repeat(3, min-content)
     auto
-    52rem
+    60rem
     auto;
 
   @media only screen and (max-width: $bp-large) {
@@ -84,7 +85,32 @@ body {
       min-content
       //repeat(3, min-content)
       auto
-      58rem
+      62rem
+      auto;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-rows:
+      6rem
+      85dvh
+      auto
+      auto
+      min-content
+      //repeat(3, min-content)
+      auto
+      70rem
+      auto;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    grid-template-rows:
+      6rem
+      85dvh
+      auto
+      auto
+      min-content
+      //repeat(3, min-content)
+      auto
+      90rem
       auto;
   }
 }

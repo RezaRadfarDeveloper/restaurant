@@ -52,18 +52,27 @@
     padding: 3.8rem 35rem;
     margin-top: 1rem;
     transition: transform 0.7s ease-in-out;
+    @media only screen and (max-width: $bp-large) {
+      width: 50%;
+    }
+    @media only screen and (max-width: $bp-small) {
+      width: 80%;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      width: 90%;
+    }
 
     &--1 {
-      background-color: #e0bce238;
+      background-color: #e0bce238 !important;
     }
     &--2 {
-      background-color: #c8eeff94;
+      background-color: #c8eeff94 !important;
     }
     &--3 {
-      background-color: rgba(212, 255, 221, 1);
+      background-color: rgba(212, 255, 221, 1) !important;
     }
     &--4 {
-      background-color: rgba(240, 221, 56, 0.26);
+      background-color: rgba(240, 221, 56, 0.26) !important;
     }
   }
 
@@ -73,6 +82,9 @@
     margin-top: 7%;
     font-size: 2.1rem;
     font-weight: 600;
+    @media only screen and (max-width: $bp-small) {
+      text-align: center;
+    }
   }
 
   &__read {
@@ -87,6 +99,9 @@
     font-weight: 500;
     margin-bottom: 0;
     border-radius: 10rem;
+    @media only screen and (max-width: $bp-small) {
+      margin: auto;
+    }
     background: #fff;
     &--1 {
       color: #9462a6;
