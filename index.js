@@ -7,12 +7,12 @@ let oldActiveSlide = 0;
 const lArrow = document.querySelector(".testimonials__arrow--left");
 const rArrow = document.querySelector(".testimonials__arrow--right");
 
-const setArrowsColor = (currSlide, number) => {
-  lArrow.classList.remove(`testimonials__box--${currSlide + 1}`);
-  rArrow.classList.remove(`testimonials__box--${currSlide + 1}`);
+const setArrowsColor = (prevSlide, number) => {
+  lArrow.classList.remove(`testimonials__box--${prevSlide + 1}`);
+  rArrow.classList.remove(`testimonials__box--${prevSlide + 1}`);
   lArrow.classList.add(`testimonials__box--${number + 1}`);
   rArrow.classList.add(`testimonials__box--${number + 1}`);
-  // rArrow.classList.add(`testimonials__box--${currSlide}`);
+  // rArrow.classList.add(`testimonials__box--${prevSlide}`);
 };
 
 function goToSlide(number) {
@@ -27,7 +27,6 @@ function goToSlide(number) {
       s.style.transform = `translate(${
         (i - number) * 100 - 50
       }%, -50%) scale(1)`;
-    //TBC ....***
   });
 }
 const dashesContainer = document.querySelector(".testimonials__dashes");
