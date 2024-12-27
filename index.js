@@ -2,11 +2,21 @@ import "./sass/main.scss";
 const slides = document.querySelectorAll(".testimonials__box");
 const slidesCount = slides.length;
 let currSlide = 0;
+let oldActiveSlide = 0;
 
 const lArrow = document.querySelector(".testimonials__arrow--left");
 const rArrow = document.querySelector(".testimonials__arrow--right");
 
+const setArrowsColor = (currSlide, number) => {
+  lArrow.classList.remove(`testimonials__box--${currSlide + 1}`);
+  rArrow.classList.remove(`testimonials__box--${currSlide + 1}`);
+  lArrow.classList.add(`testimonials__box--${number + 1}`);
+  rArrow.classList.add(`testimonials__box--${number + 1}`);
+  // rArrow.classList.add(`testimonials__box--${currSlide}`);
+};
+
 function goToSlide(number) {
+  setArrowsColor(oldActiveSlide, number);
   currSlide = number;
   slides.forEach((s, i) => {
     if (i !== number)
@@ -18,7 +28,6 @@ function goToSlide(number) {
         (i - number) * 100 - 50
       }%, -50%) scale(1)`;
     //TBC ....***
-    // lArrow.classList.add(`testimonials__box--${number - 1}`);
   });
 }
 const dashesContainer = document.querySelector(".testimonials__dashes");
@@ -43,6 +52,7 @@ goToSlide(0);
 activateDash(0);
 
 const nextSlide = function () {
+  oldActiveSlide = currSlide;
   currSlide++;
   if (currSlide > slidesCount - 1) currSlide = 0;
 
@@ -51,6 +61,7 @@ const nextSlide = function () {
 };
 
 const prevSlide = function () {
+  oldActiveSlide = currSlide;
   currSlide--;
   if (currSlide < 0) currSlide = slidesCount - 1;
 
@@ -64,6 +75,7 @@ lArrow.addEventListener("click", prevSlide);
 dashesContainer.addEventListener("click", function (e) {
   if (e.target.classList.contains("dash")) {
     const slideNum = parseInt(e.target.dataset.slide);
+    oldActiveSlide = currSlide;
     goToSlide(slideNum);
     activateDash(slideNum);
   }
