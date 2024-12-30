@@ -12,7 +12,6 @@ const setArrowsColor = (prevSlide, number) => {
   rArrow.classList.remove(`testimonials__box--${prevSlide + 1}`);
   lArrow.classList.add(`testimonials__box--${number + 1}`);
   rArrow.classList.add(`testimonials__box--${number + 1}`);
-  // rArrow.classList.add(`testimonials__box--${prevSlide}`);
 };
 
 function goToSlide(number) {
@@ -83,7 +82,7 @@ dashesContainer.addEventListener("click", function (e) {
 
 const options = {
   root: null,
-  threshold: 0.25,
+  threshold: 0.8,
 };
 
 function revealSection(entries, observer) {
